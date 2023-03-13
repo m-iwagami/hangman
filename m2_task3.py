@@ -1,1 +1,1 @@
-guess = str(input("Enter a single letter "))
+guess = input("Enter a single letter ")
