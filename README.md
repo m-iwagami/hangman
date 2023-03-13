@@ -3,7 +3,16 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 
 This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it. 
 
-milestone_2.py choose a rondom word from a list
-m2_task3.py - asking a user to enter a letter.
-m2_task4.py - giving a results
+created a list with 5 fruits name and pick a random word
+    word_list = ['apple', 'lemon', 'orange', 'strawberry', 'dragonfruit']
+    word = random.choice(word_list)
+    print(word)
+a user input a single alphabet letter
+    guess = input("Enter a single letter ")
 
+return an alart message if the input was more than 1 word or non-alphabet character.
+
+    if len(guess) == 1 and guess.isalpha() == True:
+        print("Good guess!")
+    else:
+        print("Oops! That is not a valid input.")
