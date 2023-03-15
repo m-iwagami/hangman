@@ -12,7 +12,29 @@ a user input a single alphabet letter
 
 return an alart message if the input was more than 1 word or non-alphabet character.
 
-    if len(guess) == 1 and guess.isalpha() == True:
-        print("Good guess!")
-    else:
-        print("Oops! That is not a valid input.")
+check_guess function changes the input to lower key alphabet
+After that, if the alphabet is in the word, it prints "good guess",
+if not, it prints out "sorry". 
+If it's yes, 
+        def check_guess(guess):
+            guess = guess.lower()
+            if guess in word:
+                print(f"Good guess {guess} is in the word")
+            else:
+                print(f"Sorry,{guess} is not in the word")
+
+ask_for_input function checks the input is a single letter,
+and it run through the check_guess function.
+if the input doesn't follow meet the requirement, it prints out "invalid message"
+
+        def ask_for_input():
+            while True:
+                if len(guess) > 1 or guess.isalpha() != True:
+                    print("Invalid letter. Please, enter a single alphabetical character.")
+                    break
+                elif (len(guess) == 1 and guess.isalpha() == True):
+                    check_guess(guess)
+                    break
+        ask_for_input() 
+
+
