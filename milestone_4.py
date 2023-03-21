@@ -8,6 +8,5 @@ class Hangman:
         self.word_guessed = []
         for i in xrange(len(self.word)):
             self.word_guessed.append('-')
-        ['_']*len(self.word)
         self.num_letters = len(set(self.word)) - self.word_guessed
         self.list_of_guesses = []
