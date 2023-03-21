@@ -1,3 +1,13 @@
+class Hangman:
+    def __init__(self, word_list, num_lives=5):
+        self.word_list = word_list
+        self.num_lives = num_lives
+        self.word = word
+        self.num_letters = num_letters
+        self.word_guessed = word_guessed
+        self.list_of_guesses = list_of_guesses
+
+
 import random
 
 word_list = ['apple', 'lemon', 'orange', 'strawberry', 'dragonfruit']
@@ -21,11 +31,3 @@ def ask_for_input():
             break
 ask_for_input
 
-class Hangman:
-    def __init__(self,word_list,num_lives,word,num_letters,word_guessed,list_of_guesses):
-        self.word_list = word_list
-        self.num_lives = 5
-        self.word = word 
-        self.num_letters = num_letters
-        self.word_guessed = word_guessed
-        self.list_of_guesses = list_of_guesses
