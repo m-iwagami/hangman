@@ -15,6 +15,10 @@ class Hangman:
         guess = guess.lower()
         if guess in self.word:
             print(f"Good guess! {guess} is in the word.")
+            for guess in list(self.word):
+               if guess == self.word:
+                self.word_guessed
+            self.num_letters - 1
         else:
             print(f"Sorry,{guess} is not in the word")
         self.list_of_guesses.append(guess)
