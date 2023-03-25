@@ -3,17 +3,16 @@ import random
 class Hangman:
     def __init__(self, word_list, num_lives=5):
         self.word_list = word_list
-        self.word = random.choice(word_list)
+        self.word = random.choice(word_list) #choose a random word from a list
         self.num_lives = num_lives
-        self.word_guessed = ["_"]*len(self.word)
+        self.word_guessed = ["_"]*len(self.word) #create blank underscores for the chosen word
         self.num_letters = len(list(set(self.word)))
         self.list_of_guesses = []
         
-#%%
     def check_guess(self, guess):
         guess = str.lower(guess)
         word_lower = str.lower(self.word)
-        guess_count = word_lower.count(guess)
+        guess_count = word_lower.count(guess) #counting how many letters in the chosen word
 
         if guess_count == 1:
             letter_index = word_lower.index(guess)
@@ -31,7 +30,7 @@ class Hangman:
             count = 1
 
             while count < guess_count:
-                letter_index = word_lower.index(guess, letter_indices[-1]+1)
+                letter_index = word_lower.index(guess, letter_indices[-1]+1) #what is this "+1"??
                 letter_indices.append(letter_index)
                 count += 1
 
@@ -81,5 +80,3 @@ if __name__ == '__main__':
     word_list = ["apple"]
     play_game(word_list)
 
-
-# %%
