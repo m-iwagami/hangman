@@ -3,38 +3,25 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 
 This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it. 
 
-created a list with 5 fruits name and pick a random word
-    word_list = ['apple', 'lemon', 'orange', 'strawberry', 'dragonfruit']
-    word = random.choice(word_list)
-    print(word)
-a user input a single alphabet letter
-    guess = input("Enter a single letter ")
+You have 5 attempts to guess a word related to fruits.
+If you guess correctly, the "_"(under_score) will change it to the alphabet.
+If you didn't guess correctly, your number of lives will decrease by 1
+Please make sure to type single alphabet character, otherwise computer won't recognise your input.
 
-return an alart message if the input was more than 1 word or non-alphabet character.
 
-check_guess function changes the input to lower key alphabet
-After that, if the alphabet is in the word, it prints "good guess",
-if not, it prints out "sorry". 
-If it's yes, 
-        def check_guess(guess):
-            guess = guess.lower()
-            if guess in word:
-                print(f"Good guess {guess} is in the word")
-            else:
-                print(f"Sorry,{guess} is not in the word")
+#Hangman class has 2 parameter. (word_list, and num_lives)
+There are few other attributes under the initialization 
 
-ask_for_input function checks the input is a single letter,
-and it run through the check_guess function.
-if the input doesn't follow meet the requirement, it prints out "invalid message"
+There are 2 main methods called ask_for_input and check_guess
+ask_for_input filters the player's input and make sure they haven't input the alphabet yet.
+after that, check_guess filter following requirements
+For example, 
+   if len(guess) > 1 or guess.isalpha() != True:
+   if the input is not alphabet, it won't play the game. 
+   if the input is more than 1 character, it won't play the game.  
 
-        def ask_for_input():
-            while True:
-                if len(guess) > 1 or guess.isalpha() != True:
-                    print("Invalid letter. Please, enter a single alphabetical character.")
-                    break
-                elif (len(guess) == 1 and guess.isalpha() == True):
-                    check_guess(guess)
-                    break
-        ask_for_input() 
-
+KNOWN Error
+These two functions are not working
+list_of_guesses
+word_gussed 
 
